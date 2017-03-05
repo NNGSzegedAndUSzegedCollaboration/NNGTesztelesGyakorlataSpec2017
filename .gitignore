@@ -1,0 +1,6 @@
+ServiceConvert/.gradle
+ServiceConvert/build/
+ServiceConvert/bin/
+UserService/.gradle
+UserService/build/
+UserService/bin/
