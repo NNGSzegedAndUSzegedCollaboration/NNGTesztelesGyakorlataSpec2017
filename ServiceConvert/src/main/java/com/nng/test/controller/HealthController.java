@@ -1,7 +1,5 @@
 package com.nng.test.controller;
 
-import java.util.Date;
-
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.http.HttpStatus;
@@ -14,11 +12,10 @@ import com.nng.test.dto.Health;
 public class HealthController {
 
 	private static final Health UP = new Health("UP");
-	private static final Health DOWN = new Health("DOWN");
 
 	@RequestMapping("/health")
 	public Health getHealth(HttpServletResponse response) {
-		Health ret = new Date().getTime() % 2 == 0 ? UP : DOWN;
+		Health ret = UP;
 		switch (ret.getStatus()) {
 		case "UP":
 			response.setStatus(HttpStatus.OK.value());
